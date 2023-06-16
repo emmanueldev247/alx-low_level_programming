@@ -1,1 +1,1 @@
-**A repo for 0x00. Hello world**
+**A directory for 0x00. Hello world**
