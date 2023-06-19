@@ -17,17 +17,17 @@ int main(void)
 			{
 				if (x > m)
 				{
-					if (m > n)
+				if (m > n)
+				{
+					putchar(n);
+					putchar(m);
+					putchar(x);
+					if (n != 55 || m != 56 || x != 57)
 					{
-						putchar(n);
-						putchar(m);
-						putchar(x);
-						if (n != 55 || m != 56 || x != 57)
-						{
-							putchar(',');
-							putchar(' ');
-						}
+					putchar(',');
+					putchar(' ');
 					}
+				}
 				}
 			}
 		}
