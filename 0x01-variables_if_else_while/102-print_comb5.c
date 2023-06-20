@@ -15,25 +15,45 @@ int main(void)
 		{
 			d = b + '\x01';
 			count = 1;
+			if (b == 56)
+			{
+				d = 100;
+			}
 			for (c = a; c < 58; c++)
 			{
 				if ((d == 57) || (count > 1))
 				{
 					d = 48;
 				}
+				if (d == 100)
+				{
+					d = 57;
+				}
+				if (d == 58)
+				{
+					d = 48;
+					c = c + '\x01';
+				}
+
 				for (d = d; d < 58; d++)
 				{
-					putchar(a);
-					putchar(b);
-					putchar(' ');
-					putchar(c);
-					putchar(d);
-					if ((a != 57) || (b != 56) || (c != 57) || (d != 57))
+					if ((a != 58) && (b != 57))
 					{
-						putchar(',');
+					if ((a != c) || (b != d))
+					{
+						putchar(a);
+						putchar(b);
 						putchar(' ');
+						putchar(c);
+						putchar(d);
+						if ((a != 57) || (b != 56) || (c != 57) || (d != 57))
+						{
+							putchar(',');
+							putchar(' ');
+						}
+						count++;
 					}
-					count++;
+					}
 				}
 			}
 		}
