@@ -1,8 +1,8 @@
-#include "main.h" 
+#include "main.h"
 /**
  * main - Entry point
  * Description - prints strings without standard functions
- * Return: Returns 0 
+ * Return: Returns 0
  */
 int main(void)
 {
