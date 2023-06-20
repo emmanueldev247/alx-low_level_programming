@@ -7,57 +7,39 @@
  */
 int main(void)
 {
-	int a, b, c, d, count;
+	int i, j, k, m;
 
-	for (a = 48; a < 58; a++)
+	i = 48;
+	while (i < 58)
 	{
-		for (b = 48; b < 58; b++)
+		j = 48;
+		while (j < 58)
 		{
-			d = b + '\x01';
-			count = 1;
-			if (b == 56)
+			m = j + 1;
+			k = i;
+			while (k < 58)
 			{
-				d = 100;
-			}
-			for (c = a; c < 58; c++)
-			{
-				if ((d == 57) || (count > 1))
+				while (m < 58)
 				{
-					d = 48;
-				}
-				if (d == 100)
-				{
-					d = 57;
-				}
-				if (d == 58)
-				{
-					d = 48;
-					c = c + '\x01';
-				}
-
-				for (d = d; d < 58; d++)
-				{
-					if ((a != 58) && (b != 57))
+					putchar(i);
+					putchar(j);
+					putchar(32);
+					putchar(k);
+					putchar(m);
+					if (i < 57 || j < 56 || k < 57 || m < 57)
 					{
-					if ((a != c) || (b != d))
-					{
-						putchar(a);
-						putchar(b);
-						putchar(' ');
-						putchar(c);
-						putchar(d);
-						if ((a != 57) || (b != 56) || (c != 57) || (d != 57))
-						{
-							putchar(',');
-							putchar(' ');
-						}
-						count++;
+						putchar(44);
+						putchar(32);
 					}
-					}
+					m++;
 				}
+				m = 48;
+				k++;
 			}
+			j++;
 		}
+		i++;
 	}
-	putchar('\n');
+	putchar(10);
 	return (0);
 }
