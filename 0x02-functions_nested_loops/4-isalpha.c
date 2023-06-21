@@ -6,23 +6,24 @@
  */
 int _isalpha(int c)
 {
-	int i, j;
+	int i, j, ret_val;
 
+	ret_val = 0;
 	for (i = 65; i <= 90; i++)
 	{
 		if (c == i)
 		{
-			return (1);
+			ret_val = 1;
 		} else
 		{
 			for (j = 97; j <= 122; j++)
 			{
 				if (c == j)
 				{
-					return (1);
+					ret_val = 1;
 				}
 			}
 		}
 	}
-	return (0);
+	return (ret_val);
 }
