@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * int _abs(int) - function that prints the sign of a number
+ * _abs - function that prints the sign of a number
  * @n:  Parameter to check
  * Return: Returns 1 or 0 or -1
  */
