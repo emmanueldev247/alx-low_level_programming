@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _islower - function that prints the sign of a number
+ * print_sign - function that prints the sign of a number
  * @n:  Parameter to check
  * Return: Returns 1 or 0 or -1
  */
