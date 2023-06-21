@@ -1,21 +1,21 @@
 #include "main.h"
 /**
- * print_last_digit - function that prints the last digit of a number
- * @n:  Parameter to check
- * Return: Returns the value of the last digit
+ * jack_bauer - function that prints every minute of the day of Jack Bauer
  */
-int print_last_digit(int n)
+void jack_bauer(void)
 {
-	int val;
-	
-	if (n < 0)
+	int i, j;
+
+	for (i = 0; 1 <= 23; i++)
 	{
-		val = -1 * (n % 10);
-		_putchar(val + '0');
-	} else
-	{
-		val = n % 10;
-		_putchar(val + '0');
+		for (j = 0; j <= 59; j++)
+		{
+			_putchar(i / 10 + 48);
+			_putchar(i % 10 + 48);
+			_putchar(':');
+			_putchar(j / 10 + 48);
+			_putchar(j % 10 + 48);
+			_putchar('\n');
+		}
 	}
-	return (val);
 }
