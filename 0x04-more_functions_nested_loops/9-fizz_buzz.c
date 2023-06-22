@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- *
- *
+ * main - function to do the FizzBuzz magic
+ * Return: returns 0 (Success)
  */
 int main(void)
 {
