@@ -11,3 +11,4 @@ void spc(int n);
 void print_square(int size);
 void print_triangle(int size);
 void hsh(int n);
+void print_number(int n);
