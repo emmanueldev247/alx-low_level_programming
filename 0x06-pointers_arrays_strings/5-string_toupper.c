@@ -1,6 +1,7 @@
 #include "main.h"
 /**
  * string_toupper - function to change all lowercase to uppercase
+ * @text: text to be converted
  * Return: returns string after conversion
  */
 char *string_toupper(char *text)
@@ -17,7 +18,7 @@ char *string_toupper(char *text)
 	{
 		len++;
 	}
-	
+
 	for (i = 0; i < len; i++)
 	{
 		if ((changed[i] > 96) && (changed[i] < 123))
