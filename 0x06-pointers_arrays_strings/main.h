@@ -11,5 +11,7 @@ char *cap_string(char *);
 int isChar(char c, int *list);
 void changer(char *ch);
 char *leet(char *);
+void print_number(int n);
+int _putchar(char c);
 
 #endif
