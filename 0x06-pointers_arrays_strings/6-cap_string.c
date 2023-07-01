@@ -12,18 +12,19 @@ char *cap_string(char *text)
 	int list[13];
 	int i, len;
 	char *changed;
+
 	changed = text;
-	
+
 	list[0] = 44;
-    list[1] = 59;
-    list[2] = 46;
-    list[3] = 33;
-    list[4] = 63;
-    list[5] = 34;
-    list[6] = 40;
-    list[7] = 41;
-    list[8] = 123;
-    list[9] = 125;
+	list[1] = 59;
+	list[2] = 46;
+	list[3] = 33;
+	list[4] = 63;
+	list[5] = 34;
+	list[6] = 40;
+	list[7] = 41;
+	list[8] = 123;
+	list[9] = 125;
 	list[10] = 32;
 	list[11] = 9;
 	list[12] = 10;
@@ -49,14 +50,18 @@ char *cap_string(char *text)
 	return (changed);
 }
 
-
+/**
+ * isChar - function to check if a char is part of the listed separators
+ * @c: character to check
+ * @list: an array of all separators
+ * Return: returns 1 if found otherwise 0
+ */
 int isChar(char c, int *list)
 {
 	int i;
 
 	for (i = 0; i < 13; i++)
 	{
-		
 		if (list[i] == c)
 		{
 			return (1);
@@ -65,8 +70,12 @@ int isChar(char c, int *list)
 	return (0);
 }
 
+/**
+ * changer - function to change an alphabetic character to uppercase
+ * @ch: character to check
+ */
 void changer(char *ch)
 {
 	if ((*ch > 96) && (*ch < 123))
-			*ch = *ch - 32;
+		*ch = *ch - 32;
 }
