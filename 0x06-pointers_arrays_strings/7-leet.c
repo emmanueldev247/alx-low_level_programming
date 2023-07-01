@@ -7,7 +7,7 @@
 char *leet(char *text)
 {
 	char letters[10], numbers[10];
-	int i, j, len;
+	int j, len;
 
 	letters[0] = 'a';
 	letters[1] = 'A';
@@ -33,16 +33,14 @@ char *leet(char *text)
 
 	len = 0;
 	while (text[len] != '\0')
-		len++;
-
-	for (i = 0; i < len; i++)
 	{
 		for (j = 0; j < 10; j++)
 		{
-			if (text[i] == letters[j])
-				text[i] = numbers[j];
+			if (text[len] == letters[j])
+				text[len] = numbers[j];
 		}
 
+		len++;
 	}
 	return (text);
 }
