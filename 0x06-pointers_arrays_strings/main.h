@@ -10,5 +10,6 @@ char *string_toupper(char *);
 char *cap_string(char *);
 int isChar(char c, int *list);
 void changer(char *ch);
+char *leet(char *);
 
 #endif
