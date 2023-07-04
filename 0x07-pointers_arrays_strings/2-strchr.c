@@ -7,7 +7,7 @@
  */
 char *_strchr(char *s, char c)
 {
-	int len;
+	unsigned int len;
 
 	len = 0;
 	while (s[len] != '\0')
