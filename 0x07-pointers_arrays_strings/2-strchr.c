@@ -19,5 +19,10 @@ char *_strchr(char *s, char c)
 		len++;
 	}
 
+	if (s[len] == c)
+	{
+		return (s + len);
+	}
+
 	return ('\0');
 }
