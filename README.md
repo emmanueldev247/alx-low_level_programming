@@ -9,3 +9,4 @@ _The projects here are (would be updated as I push):_
 - 0x05. pointers, arrays, strings
 - 0x06. pointers, arrays, strings
 - 0x07. pointers, arrays, strings
+- 0x08. recursion
