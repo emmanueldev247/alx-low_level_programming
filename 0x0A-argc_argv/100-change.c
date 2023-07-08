@@ -20,14 +20,9 @@ int main(int argc, char *argv[])
 
 	val = atoi(argv[1]);
 
-	if (val < 0)
-	{
-		printf("Error\n");
-		return (1);
-	}
 
 	count = 0;
-	while (val != 0)
+	while (val > 0)
 	{
 		if (val >= 25)
 			val -= 25;
