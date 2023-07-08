@@ -11,12 +11,23 @@
  */
 int main(int argc, char *argv[])
 {
-	int val, count;
+	int val, count, j;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
+	}
+
+	j = 0;
+	while (argv[1][j] != '\0')
+	{
+		if (!isdigit(argv[1][j]))
+		{
+			printf("Error\n");
+			return (1);
+		}
+		j++;
 	}
 
 	val = atoi(argv[1]);
