@@ -31,6 +31,13 @@ int main(int argc, char *argv[])
 	}
 
 	val = atoi(argv[1]);
+
+	if (val < 0)
+	{
+		printf("Error\n");
+		return (1);
+	}
+
 	count = count_helper(val);
 
 	printf("%d\n", count);
