@@ -8,7 +8,7 @@
  * Return: Returns a pointer to the array, or NULL if it fails
  */
 
- char *create_array(unsigned int size, char c)
+char *create_array(unsigned int size, char c)
 {
 	char *arr;
 	unsigned int i;
@@ -17,7 +17,7 @@
 		return (NULL);
 
 	arr = (char *)malloc(sizeof(c) * size);
-	
+
 	if (arr == NULL)
 		return (NULL);
 
