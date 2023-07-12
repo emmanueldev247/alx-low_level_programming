@@ -1,16 +1,15 @@
 #include <stdlib.h>
+#include <string.h>
 #include "main.h"
 /**
- * _strdup - function that returns a pointer to a
- * newly allocated space in memory, which contains
- * a copy of the string given as a parameter
- * @str: string to be copied
+ * _strdup - function to duplicate string
+ * @str: string to be duplicated
  *
- * Return: pointer to the diplicated string or NULL
+ * Return: pointer to the duplicated string
  */
 char *_strdup(char *str)
 {
-	char *cpy;
+	char *duplicate;
 	unsigned int len, i;
 
 	if (str == NULL)
@@ -20,13 +19,16 @@ char *_strdup(char *str)
 	while (str[len] != '\0')
 		len++;
 
-	cpy = malloc(sizeof(char) * len + 1);
+	duplicate = (char *)malloc(sizeof(*str) * len);
 
-	if (cpy == NULL)
+	if (duplicate == NULL)
+	{
+		free(duplicate);
 		return (NULL);
+	}
 
-	for (i = 0; i <= len; i++)
-		cpy[i] = str[i];
+	for (i = 0; i < len; i++)
+		duplicate[i] = str[i];
 
-	return (cpy);
+	return (duplicate);
 }
