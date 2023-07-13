@@ -14,7 +14,7 @@ char *argstostr(int ac, char **av)
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
-	
+
 	/* Getting the total lenght by doubling down on each args*/
 	total_len = 0;
 	for (i = 0; i < ac; i++)
@@ -27,14 +27,12 @@ char *argstostr(int ac, char **av)
 			len++;
 		total_len += len;
 	}
-	
-	/* adding space for '\n\ and '\0' */
-	total_len += ac;
 
+	total_len += ac;  /* adding space for '\n\ and '\0' */
 	constr = malloc(sizeof(char *) * total_len);
 	if  (constr == NULL)
 		return (NULL);
-	
+
 	/* Copying the string into constr */
 	index = 0;
 	for (i = 0; i < ac; i++)
