@@ -29,7 +29,7 @@ char *argstostr(int ac, char **av)
 	}
 
 	total_len += ac;  /* adding space for '\n\ and '\0' */
-	constr = malloc(sizeof(char) * total_len);
+	constr = malloc(sizeof(char) * total_len + 1);
 	if  (constr == NULL)
 		return (NULL);
 
@@ -47,5 +47,6 @@ char *argstostr(int ac, char **av)
 		constr[index] = '\n';
 		index++;
 	}
+	constr[index] = '\0';
 	return (constr);
 }
