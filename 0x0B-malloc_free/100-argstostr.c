@@ -29,7 +29,7 @@ char *argstostr(int ac, char **av)
 	}
 
 	total_len += ac;  /* adding space for '\n\ and '\0' */
-	constr = malloc(sizeof(char *) * total_len);
+	constr = malloc(sizeof(char) * total_len);
 	if  (constr == NULL)
 		return (NULL);
 
