@@ -4,7 +4,7 @@
   * string_nconcat - function to concatenate 2 strings
   * @s1: first string
   * @s2: second string
-  * @n: 
+  * @n: number of bytes
   *
   * Return: pointer to concatenated string
   */
@@ -28,7 +28,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (n >= len2)
 		n = len2;
-	
+
 	combined = malloc(sizeof(char) * (len1 + n));
 	if (combined == NULL)
 		return (NULL);
@@ -38,7 +38,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	for (i = 0; i < n; i++)
 		combined[len1 + i] = s2[i];
-	
+
 	combined[len1 + i] = '\0';
 
 	return (combined);
