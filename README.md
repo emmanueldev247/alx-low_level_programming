@@ -15,3 +15,4 @@ _The projects here are (would be updated as I push):_
 - 0x0B. malloc, free
 - 0x0C. more malloc, free
 - 0x0D. preprocessor
+- 0x0E. structures, typedef
