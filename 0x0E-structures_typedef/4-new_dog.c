@@ -1,5 +1,6 @@
-#include  <stdio.h>
-#include  <stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include "dog.h"
 /**
  * new_dog - function that creates a new dog
@@ -25,16 +26,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 
 	d->age = age;
-	if (d->age == NULL)
-	{
-		free(d);
-		return (NULL);
 
 	d->owner = owner;
 	if (d->owner == NULL)
 	{
 		free(d);
 		return (NULL);
-
+	}
 	return (d);
 }
