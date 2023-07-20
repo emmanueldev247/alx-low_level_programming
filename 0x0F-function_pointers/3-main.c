@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 
 	op_p = get_op_func(argv[2]);
 
-	if (op_p == NULL)
+	if (op_p == NULL || strlen(argv[2]) != 1)
 	{
 		printf("Error\n");
 		return (99);
