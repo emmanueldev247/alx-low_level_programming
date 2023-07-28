@@ -1,30 +1,27 @@
-section .data
-	hello db 'Hello, Holberton', 0
-	format db '%s', 0
-	newline db 10, 0
+SECTION .data
+    hello_msg   db "Hello, Holberton", 0
+    format_str  db "%s", 10, 0
 
-section .text
-	global main
-	extern printf
+SECTION .text
+    extern printf
+    global main
 
 main:
-	; Set up the stack frame
-	push rbp
-	mov rbp, rsp
+    ; Load message address into ESI
+    mov     esi, hello_msg
 
-	; Push the hello message on the stack
-	mov rdi, hello
-	call printf
+    ; Load format string address into EDI
+    mov     edi, format_str
 
-	; Push the newline string on the stack
-	mov rdi, newline
-	call printf
+    ; Clear EAX register (used for function return values)
+    xor     eax, eax
 
-	; Clean up the stack frame
-	mov rsp, rbp
-	pop rbp
+    ; Call the printf function
+    call    printf
 
-	; Exit the program
-	mov eax, 60		; syscall number for exit
-	xor edi, edi	; exit status 0
-	syscall
+    ; Clear EAX register again (optional, depends on context)
+    xor     eax, eax
+
+    ; Return from the main function
+    ret
+
