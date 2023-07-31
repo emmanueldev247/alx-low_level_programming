@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
- * print_list - function that prints all the elements of aa listint_t list
- * @h the singly list passed
+ * print_listint - function that prints all the elements of aa listint_t list
+ * @h: the singly list passed
  *
  * Return: the number of nodes
  */
