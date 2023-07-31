@@ -3,7 +3,7 @@
  * add_nodeint - function that adds a new node at
  *					the beginning of a linked list
  * @head: head node
- * @n: string to be added
+ * @n: integer data to be added
  *
  * Return: the number of elements
  */
