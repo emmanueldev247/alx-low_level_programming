@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * free_listint2 - function that frees a linked list
+ * free_listint_safe - function that frees a linked list
  * @h: head of the singly list passed
  *
  * Return: nothing
@@ -8,6 +8,9 @@
 size_t free_listint_safe(listint_t **h)
 {
 	listint_t *current, *next;
+	size_t i;
+
+	i = 0;
 
 	if (h != NULL)
 	{
@@ -20,4 +23,5 @@ size_t free_listint_safe(listint_t **h)
 		}
 		*h = NULL;
 	}
+	return (i);
 }

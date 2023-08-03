@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
  * print_listint_safe - function that prints all the elements of a linked list
- * @h: the singly list passed
+ * @head: the singly list passed
  *
  * Return: the number of nodes
  */
@@ -14,7 +14,7 @@ size_t print_listint_safe(const listint_t *head)
 	slow = head;
 	fast = head;
 
-	while(fast && fast->next)
+	while (fast && fast->next)
 	{
 		slow = slow->next;
 		fast = fast->next->next;
@@ -39,6 +39,6 @@ size_t print_listint_safe(const listint_t *head)
 			slow = slow->next;
 			i++;
 	}
-	
+
 	return (i);
 }
