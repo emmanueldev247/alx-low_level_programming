@@ -8,17 +8,16 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	unsigned int i;
-	const listint_t *temp, *slow, *fast;
+	const listint_t *slow, *fast;
 
 	i = 0;
-	temp = head;
 	slow = head;
 	fast = head;
 
 	while(fast && fast->next)
 	{
 		slow = slow->next;
-		fast->fast->next->next;
+		fast = fast->next->next;
 
 		if (slow == fast)
 			break;
@@ -41,12 +40,5 @@ size_t print_listint_safe(const listint_t *head)
 			i++;
 	}
 	
-	return (i);
-}
-
-
-
-
-
 	return (i);
 }
