@@ -1,23 +1,23 @@
 #include "lists.h"
 /**
  * free_listint2 - function that frees a linked list
- * @head: head of the singly list passed
+ * @h: head of the singly list passed
  *
  * Return: nothing
  */
-void free_listint2(listint_t **head)
+size_t free_listint_safe(listint_t **h)
 {
 	listint_t *current, *next;
 
-	if (head != NULL)
+	if (h != NULL)
 	{
-		current = *head;
+		current = *h;
 		while (current)
 		{
 			next = current->next;
 			free(current);
 			current = next;
 		}
-		*head = NULL;
+		*h = NULL;
 	}
 }
