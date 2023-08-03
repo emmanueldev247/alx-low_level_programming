@@ -39,7 +39,7 @@ unsigned int binary_to_uint(const char *b)
 unsigned int power(unsigned int base, unsigned int exponent)
 {
 	unsigned int result, i;
-	
+
 	result = 1;
 
 	for (i = 0; i < exponent; i++)
