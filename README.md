@@ -20,3 +20,4 @@ _The projects here are (would be updated as I push):_
 - 0x10. variadic functions
 - 0x12. singly linked lists
 - 0x13. more singly linked lists
+- 0x14. bit manipulation project
