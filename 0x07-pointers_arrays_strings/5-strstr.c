@@ -12,13 +12,13 @@ char *_strstr(char *haystack, char *needle)
 	unsigned int len1, len2, tmp;
 
 	len1 = 0;
-	len2 = 0;
 
 	while (haystack[len1] != '\0')
 	{
 		tmp = len1;
+		len2 = 0;
 
-		while ((haystack[len1] == needle[len2]) &&  (needle[len2] != '\0'))
+		while ((haystack[len1] == needle[len2]) &&  (needle[len2] != '\0') && (haystack[len1] != '\0'))
 		{
 			len1++;
 			len2++;
