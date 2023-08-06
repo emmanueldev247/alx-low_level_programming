@@ -1,1 +1,1 @@
-**A directory for 0x0B. malloc, free**
+**A directory for 0x0B, malloc free**
