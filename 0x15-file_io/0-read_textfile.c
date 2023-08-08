@@ -28,9 +28,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (num == -1)
 		return (0);
 
-	buffer[num - 1] = '\0';
+	write(STDOUT_FILENO, buffer, letters);
 
-	printf("%s\n", buffer);
 
 	close(fd);
 
