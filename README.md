@@ -1,29 +1,4 @@
-**A repo for my ALX projects**\
-_The projects here are (would be updated as I push):_
-
-- 0x00. hello world
-- 0x01. variables, if, else, while
-- 0x02. functions, nested loops
-- 0x03. debugging
-- 0x04. more functions, nested loops
-- 0x05. pointers, arrays, strings
-- 0x06. pointers, arrays, strings
-- 0x07. pointers, arrays, strings
-- 0x08. recursion
-- 0x09. static libraries
-- 0x0A. argc, argv
-- 0x0B. malloc, free
-- 0x0C. more malloc, free
-- 0x0D. preprocessor
-- 0x0E. structures, typedef
-- 0x0F. function pointers
-- 0x10. variadic functions
-- 0x12. singly linked lists
-- 0x13. more singly linked lists
-- 0x14. bit manipulation project
-- 0x15. file I/O
-
-# Low-Level Programming - Hatching out, Linux/Unix System Programming, Data Structures, Algorithms, C Progamming <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="C Prog. Lang Icon" style="width: 25px; height: 25px;"/>
+# Low-Level Programming - Hatching out, Linux/Unix System Programming, Data Structures, Algorithms, C Progamming <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="C Prog. Lang Icon" style="width: 27px; height: 27px;"/>
 
 In this repository, you'll find programs written for the low-level programming track (started in Sprint 1) at [ALX Africa](https://twitter.com/alx_africa). These projects were part of the Software Engineering program curriculum, where I learned about data structures, algorithms, and other low-level programming concepts while working in the C language. The subsequent section outlines the projects included: _(would be updated as I push):_
 
