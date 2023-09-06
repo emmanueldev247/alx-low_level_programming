@@ -1,4 +1,4 @@
-# Low-Level Programming - Hatching out, Linux/Unix System Programming, Data Structures, Algorithms, C Progamming <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="C Prog. Lang Icon" style="width: 27px; height: 27px;"/>
+# Low-Level Programming - Hatching out, Linux/Unix System Programming, Data Structures, Algorithms, C Progamming <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="C Prog. Lang Icon" style="width: 30px; height: 30px;"/>
 
 In this repository, you'll find programs written for the low-level programming track (started in Sprint 1) at [ALX Africa](https://twitter.com/alx_africa). These projects were part of the Software Engineering program curriculum, where I learned about data structures, algorithms, and other low-level programming concepts while working in the C language. The subsequent section outlines the projects included: _(would be updated as I push):_
 
@@ -24,7 +24,7 @@ In this repository, you'll find programs written for the low-level programming t
 * [0x13. C - More singly linked lists](./0x13-more_singly_linked_lists)
 * [0x14. C - Bit manipulation](./0x14-bit_manipulation)
 * [0x15. C - File I/O](./0x15-file_io)
-* [0x16. C - Simple Shell](https://github.comemmanueldev247/simple_shell/tree/master)
+* [0x16. C - Simple Shell](https://github.com/emmanueldev247/simple_shell/tree/master)
 
 
 ## Author: :black_nib:
