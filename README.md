@@ -1,4 +1,4 @@
-# Low-Level Programming - Hatching out, Linux/Unix System Programming, Data Structures, Algorithms, C Progamming <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="C Prog. Lang Icon" style="width: 30px; height: 30px;"/>
+# Low-Level Programming - Hatching out, Linux/Unix System Programming, Data Structures, Algorithms, C Progamming <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="C Prog. Lang Icon" style="width: 30px; height: 27px;"/>
 
 In this repository, you'll find programs written for the low-level programming track (started in Sprint 1) at [ALX Africa](https://twitter.com/alx_africa). These projects were part of the Software Engineering program curriculum, where I learned about data structures, algorithms, and other low-level programming concepts while working in the C language. The subsequent section outlines the projects included: _(would be updated as I push):_
 
