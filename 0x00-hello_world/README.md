@@ -11,7 +11,7 @@ Files | Description
 [2-assembler](./2-assembler) | Script that generates the assembly code of a C code and save it in an output file
 [3-name](./3-name) | Script that compiles a C file and creates an executable named `cisfun`
 [4-puts.c](./4-puts.c) | C program that prints exactly <span style="color: red;">"Programming is like building a multilingual puzzle</span>, followed by a new line
-<pre>
+
 ```c
 #include <stdio.h>
 
@@ -20,4 +20,4 @@ int main() {
     return 0;
 }
 ```
-</pre>
+
