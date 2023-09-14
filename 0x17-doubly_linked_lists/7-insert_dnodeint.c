@@ -14,7 +14,7 @@ size_t listint_len(dlistint_t *h)
 	if (h == NULL)
 		return (0);
 
-	temp = (dlistint_t *)h;
+	temp = h;
 	while (temp)
 	{
 		temp = temp->next;
@@ -39,7 +39,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	unsigned int size = 0;
 
 	size = listint_len(*h);
-	if (idx >= size)
+	if (idx > size)
 		return (NULL);
 
 	new = (dlistint_t *)malloc(sizeof(dlistint_t));
@@ -73,5 +73,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		count++;
 		temp = temp->next;
 	}
+
+	free(new);
 	return (NULL);
 }
