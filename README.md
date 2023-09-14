@@ -25,6 +25,7 @@ In this repository, you'll find programs written for the low-level programming t
 * [0x14. C - Bit manipulation](./0x14-bit_manipulation)
 * [0x15. C - File I/O](./0x15-file_io)
 * [0x16. C - Simple Shell](https://github.com/emmanueldev247/simple_shell/tree/master)
+* [0x17. C - Doubly linked lists](./0x17-doubly_linked_lists)
 
 
 ## Author: :black_nib:
