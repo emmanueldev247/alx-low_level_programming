@@ -35,7 +35,7 @@ size_t listint_len(dlistint_t *h)
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *temp, *new, *next;
-	unsigned int count = 1;
+	unsigned int count = 0;
 	unsigned int size = 0;
 
 	size = listint_len(*h);
@@ -48,26 +48,26 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	new->next = NULL;
 	new->n = n;
 
-	if (*h == NULL)
+	if (*h == NULL || idx == 0)
 	{
-		if (idx == 0)
-		{
-			*h = new;
-			return (new);
-		}
-		return (NULL);
+		new->next = *h;
+		if (*h)
+			(*h)->prev = new;
+		*h = new;
+		return (new);
 	}
 
 	temp = *h;
 	while (temp)
 	{
-		if (count == idx)
+		if (count == idx - 1)
 		{
 			next = temp->next;
 			temp->next = new;
-			new->next = next;
 			new->prev = temp;
-			next->prev = new;
+			new->next = next;
+			if (next)
+				next->prev = new;
 			return (new);
 		}
 		count++;
