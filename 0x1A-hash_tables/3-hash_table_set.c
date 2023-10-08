@@ -12,9 +12,9 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
-	hash_node_t *new_node, *current_node, *temp;
+	hash_node_t *new_node, *current_node;
 
-	if (key == NULL)
+	if (ht == NULL || key == NULL || value == NULL)
 		return (0);
 
 	new_node = create_node(key, value);
@@ -32,12 +32,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	else
 	{
-		temp = current_node;
+		ht->array[index] = new_node;
 
-		while (temp->next)
-			temp = temp->next;
-
-		temp->next = new_node;
+		new_node->next = current_node;
 	}
 
 	return (1);
@@ -55,20 +52,18 @@ hash_node_t *create_node(const char *key, const char *value)
 {
 	hash_node_t *node;
 
-	node = (hash_node_t *) malloc(sizeof(hash_node_t));
+	node = malloc(sizeof(hash_node_t));
 	if (node == NULL)
 		return (NULL);
 
-	node->key = (char *) malloc(strlen(key) + 1);
+	node->key = strdup(key);
 	if (node->key == NULL)
 		return (NULL);
 
-	node->value = (char *) malloc(strlen(value) + 1);
+	node->value = strdup(value);
 	if (node->value == NULL)
 		return (NULL);
 
-	strcpy(node->key, key);
-	strcpy(node->value, value);
 	node->next = NULL;
 
 	return (node);
