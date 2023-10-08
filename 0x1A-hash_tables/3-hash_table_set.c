@@ -35,6 +35,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	return (1);
 }
 
+/**
+ * create_node - funcrion to create node for key/value element
+ * @key: key of element
+ * @value: value of element
+ *
+ * Return: returns the node created if successful, otherwise NULL
+ */
 hash_node_t *create_node(const char *key, const char *value)
 {
 	hash_node_t *node;
