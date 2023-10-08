@@ -11,8 +11,8 @@
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int index, i;
-	hash_node_t *new_node, *current_node;
+	unsigned long int index;
+	hash_node_t *new_node, *current_node, *temp;
 
 	if (key == NULL)
 		return (0);
@@ -25,21 +25,27 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	current_node = ht->array[index];
 	if (current_node == NULL)
-	{
 		ht->array[index] = new_node;
-	}
-	else if (strcmp(current_node->key, key) == 0)
-	{
-		strcpy(ht->array[index]->value, value);
-	}
 
-	(void)i;
+	else if (strcmp(current_node->key, key) == 0)
+		strcpy(ht->array[index]->value, value);
+
+	else
+	{
+		temp = current_node;
+
+		while (temp->next)
+			temp = temp->next;
+
+		temp->next = new_node;
+	}
 
 	return (1);
 }
 
+
 /**
- * create_node - funcrion to create node for key/value element
+ * create_node - function to create node for key/value element
  * @key: key of element
  * @value: value of element
  *
@@ -63,6 +69,7 @@ hash_node_t *create_node(const char *key, const char *value)
 
 	strcpy(node->key, key);
 	strcpy(node->value, value);
+	node->next = NULL;
 
 	return (node);
 }
