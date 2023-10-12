@@ -58,11 +58,22 @@ hash_node_t *create_node(const char *key, const char *value)
 
 	node->key = strdup(key);
 	if (node->key == NULL)
+    {
+        free(node);
+        if (node->value)
+            free(node->value);
+        if (node->next)
+            free(node->value);
 		return (NULL);
+    }
 
 	node->value = strdup(value);
 	if (node->value == NULL)
+    {
+        free(node->key);
+        free(node);
 		return (NULL);
+    }
 
 	node->next = NULL;
 
