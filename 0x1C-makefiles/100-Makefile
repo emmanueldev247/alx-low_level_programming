@@ -9,7 +9,7 @@ NAME=school
 all: $(NAME)
 
 $(NAME): m.h $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	$(CC) $(OBJ) -o $(NAME)
 
 clean:
 	$(RM) -rf .*.sw* *~ $(NAME)
