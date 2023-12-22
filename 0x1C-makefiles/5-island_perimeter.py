@@ -7,19 +7,13 @@ def island_perimeter(grid):
     rowSize = len(grid)
     colSize = len(grid[0])
 
-    print(rowSize) #5
-    print(colSize) #6
-
     for x in range (rowSize):
         for y in range(colSize):
-            perEach = 4
             if grid[x][y] == 1:
-                print(f"cell: grid[{x}][{y}]")
+                perEach = 4
                 try:
                     if grid[x][y+1] == 1:
                         perEach -= 1
-                    else:
-                        print("no")
                 except:
                     pass
                 try:
@@ -33,11 +27,14 @@ def island_perimeter(grid):
                 except:
                     pass
                 try:
-                    if grid[x-1][y+1] == 1:
+                    if grid[x-1][y] == 1:
                         perEach -= 1
                 except:
                     pass
 
-            totalPer += perEach
+                totalPer += perEach
+                print(f"cell: grid[{x}][{y}]", end=" ")
+                print(f'PerEach: {perEach}')
+                print(f'total: {totalPer}')
 
     return totalPer
