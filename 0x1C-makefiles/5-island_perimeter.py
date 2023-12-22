@@ -1,36 +1,33 @@
-#!/c/Users/user/AppData/Local/Programs/Python/Python311/python
 #!/usr/bin/python3
+"""defines a funtion island_perimeter(grid) that returns a value"""
+
 
 def island_perimeter(grid):
+    """function that returns the perimeter of the island described in grid"""
     totalPer = 0
 
     rowSize = len(grid)
     colSize = len(grid[0])
 
-    for x in range (rowSize):
+    for x in range(rowSize):
         for y in range(colSize):
             if grid[x][y] == 1:
                 perEach = 4
-                try:
+                if (y != colSize - 1):
                     if grid[x][y+1] == 1:
                         perEach -= 1
-                except:
-                    pass
-                try:
+
+                if (y != 0):
                     if grid[x][y-1] == 1:
                         perEach -= 1
-                except:
-                    pass
-                try:
+
+                if (x != rowSize - 1):
                     if grid[x+1][y] == 1:
                         perEach -= 1
-                except:
-                    pass
-                try:
+
+                if (x != 0):
                     if grid[x-1][y] == 1:
                         perEach -= 1
-                except:
-                    pass
 
                 totalPer += perEach
 
