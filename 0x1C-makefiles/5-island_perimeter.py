@@ -33,8 +33,5 @@ def island_perimeter(grid):
                     pass
 
                 totalPer += perEach
-                print(f"cell: grid[{x}][{y}]", end=" ")
-                print(f'PerEach: {perEach}')
-                print(f'total: {totalPer}')
 
     return totalPer
